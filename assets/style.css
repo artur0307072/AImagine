@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #1e1e3f 0%, #7033a5 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.logo-star {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    vertical-align: middle;
+}
+
+.subtitle,
+.headline {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.headline .gradient,
+.subtitle .gradient {
+    background: linear-gradient(90deg, #ff87e0, #7afcff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.desc,
+.subtitle {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 2.5rem;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-btn,
+.gen-btn,
+.example-btn {
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(90deg, #ff87e0, #7afcff);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 16px 0 rgba(122, 252, 255, 0.10);
+    transition: opacity 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-btn,
+.gen-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+.cta-btn:hover,
+.gen-btn:hover,
+.example-btn:hover {
+    opacity: 0.8;
+}
+
+.example-btn {
+    border-radius: 6px;
+    padding: 0.4rem 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+}
+
+.about {
+    margin-top: 2.5rem;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 1.2rem 1rem;
+    font-size: 1rem;
+    color: #e0e0e0;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .logo {
+        font-size: 2.2rem;
+    }
+
+    .logo-star {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .headline,
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .desc {
+        font-size: 1rem;
+    }
+
+    .cta-btn,
+    .gen-btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .container {
+        padding: 1.2rem 0.5rem;
+    }
+}
