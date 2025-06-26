@@ -15,12 +15,11 @@ $api_key = '6a625395-a30d-483c-95d9-070c713a6ad4';
 require_once 'image_generator.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $result = generate_image($prompt);
+    $result = generate_image($prompt, $api_key); // Passe a chave!
     if (isset($result['error'])) {
         $error = $result['error'];
     } else {
         $image_urls = $result['images'];
-        // Exiba as imagens no HTML
     }
 }
 ?>
@@ -141,11 +140,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <?php endforeach; ?>
                 <?php endif; ?>
                 <div style="margin-top:2rem;">
-                    <a href="deepseek_form.html" class="cta-btn" style="padding:0.7rem 2rem;font-size:1rem;">Nova Imagem</a>
+                    <a href="deepseek_form.php" class="cta-btn" style="padding:0.7rem 2rem;font-size:1rem;">Nova Imagem</a>
                     <a href="login.php" class="cta-btn" style="padding:0.7rem 2rem;font-size:1rem;">Sair</a>
                 </div>
             </div>
         </div>
     </div>
 </body>
-</html>
+</html><?php
+// Adicione aqui a lógica para gerar imagens usando a API
+
+function generate_image($prompt, $api_key) {
+    // Exemplo de implementação fictícia
+    if (empty($prompt)) {
+        return ['error' => 'O prompt não pode estar vazio.'];
+    }
+    // Simule URLs de imagens geradas
+    return [
+        'images' => [
+            'https://via.placeholder.com/512x512.png?text=' . urlencode($prompt)
+        ]
+    ];
+}
